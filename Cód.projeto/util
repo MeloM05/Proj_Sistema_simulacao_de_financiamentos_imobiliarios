@@ -1,0 +1,29 @@
+package util;
+
+class InterfaceUsuario {  //Declarando classe de Interface de Usuário
+    private Scanner scanner;
+
+    public InterfaceUsuario() {   //Construtor iniciando o scanner
+        this.scanner = new Scanner(System.in); //Criando scanner para solicitar informação ao usuário
+    }
+
+    public double pedirValorImovel() {   //Scanner pedindo o valor do imóvel ao usuário
+        System.out.println("Qual é o valor do imóvel que deseja?: ");
+        return scanner.nextDouble();
+    }
+
+    public int pedirPrazoFinanciamento() {   //Scanner pedindo um prazo de financiamento para o usuário
+        System.out.println("Qual é o prazo em anos para o financiamento?: ");
+        return scanner.nextInt();
+    }
+
+    public double pedirTaxaJuros() {   //Scanner pedindo uma taxa de juros para o usuário
+        System.out.println("Qual seria a porcentagem da taxa de juros? ");
+        return scanner.nextDouble();
+    }
+
+    void fecharScanner() {   //Fechando scanner
+        scanner.close();
+
+    }
+}

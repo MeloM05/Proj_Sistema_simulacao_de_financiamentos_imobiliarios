@@ -1,0 +1,36 @@
+package modelo;
+
+class Financiamento {   //Declarando classe de Financiamento
+    private double valorImovel;   //Atributos financiamento
+    private int prazoFinanciamento;
+    private double taxaJurosAnual;
+    private double calcularPagamentoMensal;
+
+    public Financiamento(double valorDesejadoImovel, int prazoAnoFinanciamento, double taxaJurosAnual) {   //Construtor
+        this.valorImovel = valorDesejadoImovel;
+        this.prazoFinanciamento = prazoAnoFinanciamento;
+        this.taxaJurosAnual = taxaJurosAnual;
+    }
+
+    public double calcularPagamentoMensal(){    //Método de calcular pagamento mensal da classe Financiamento
+        return (this.valorImovel / (this.prazoFinanciamento * 12)) * (1 + (this.taxaJurosAnual / 12));
+    }
+
+    public double calcularValorTotal(){   //Método de calcular valor total da classe Financiamento
+        return this.calcularPagamentoMensal * this.prazoFinanciamento * 12; //RESOLVER!!!!!
+
+    }
+}
+//Crianto getter para todos os atributos privados
+public double getValorImovel(){
+    return this.valorImovel
+}
+public int getPrazoFinanciamento(){
+    return this.prazoFinanciamento
+}
+public double getTaxaJurosAnual(){
+    return this.taxaJurosAnual
+}
+public double getCalcularPagamentoMensal(){
+    return this.calcularPagamentoMensal
+}

@@ -1,0 +1,13 @@
+package main;
+import util.InterfaceUsuario
+
+public class Main {   //Declarando classe main
+    public static void main(String[] args) {
+        InterfaceUsuario interfaceUsuario = new InterfaceUsuario();
+
+        double valorImovel = interfaceUsuario.pedirValorImovel();   //Novo financiamento
+        int prazoAnoFinanciamento = interfaceUsuario.pedirPrazoFinanciamento();
+        double taxaJurosAnual = interfaceUsuario.pedirTaxaJuros();
+        Financiamento novoFinanciamento = new Financiamento(valorImovel, prazoAnoFinanciamento, taxaJurosAnual);
+    }
+}
